@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div>
+        <h1 id="title">Frieren的调查问卷</h1>
+        <p id="description" style="text-align: center;color:aliceblue;">请认真填写，不要做假</p>
+    </div>
+    <div>
+        <form method="post" id="survey-form" action="http://localhost:3000/submit ">
+            <div class="form-group">
+                <label id="name-label" for="name">姓名</label>
+                <input type="text" id="name" name="name" placeholder="输入你的大名" required>
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">邮箱(随便填,符合格式就行)</label>
+                <input type="text" name="email" id="email" placeholder="输入你的邮箱" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="请输入正确的邮箱格式，如：example@example.com">
+            </div>
+            <div class="form-group">
+                <label id="age-label" for="age">年龄</label>
+                <input id="age" name="age" type="number" placeholder="填入你的年龄"  min="12" max="120" required>
+            </div>
+            <div class="form-group">
+                <p>请问你对学校提前开学的看法是什么？</p>
+                <label>
+                    <input name="frist-survey" type="radio" value="good" class="input-radio" checked>太好了终于可以上学了，学校真的太好辣。
+                </label>
+                <label>
+                    <input name="frist-survey" type="radio" value="bad" class="input-radio">傻x学校
+                </label>
+                <label>
+                    <input name="frist-survey" type="radio" value="none" class="input-radio">没什么感觉，无所谓
+                </label>
+            </div>
+            <div class="form-group">    
+                <label for="referrer">你是哪个年级的？
+                    <select id="referrer" name="referrer">
+                        <option value="">(默认，请选择下面的选项)</option>
+                        <option value="1">初一</option>
+                        <option value="2">初二</option>
+                        <option value="3">初三</option>
+                        <option value="4">高中或以上</option>
+                    </select>
+                </label>
+            </div>
+            <div class="form-group">
+                <p>你的班级的哪些老师被换掉了？<span class="clue">(多选)</span></p>
+                <label><input type="checkbox" name="refer" value="chinese" class="input-checkbox">语文</label>
+                <label><input type="checkbox" name="refer" value="math" class="input-checkbox">数学</label>
+                <label><input type="checkbox" name="refer" value="englinsh" class="input-checkbox">英语</label>
+                <label><input type="checkbox" name="refer" value="history" class="input-checkbox">历史</label>
+                <label><input type="checkbox" name="refer" value="politics" class="input-checkbox">政治</label>
+                <label><input type="checkbox" name="refer" value="physics" class="input-checkbox">物理</label>
+            </div>
+            <div>
+                <p>还有什么补充的或者对学校建议(吐槽)?</p>
+                <textarea id="comments" class="input-textarea" name="comment" placeholder="在这写你的建议..."></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                  点我提交
+                </button>
+              </div>
+        </form>
+    </div>
+</body>
+
+</html>
