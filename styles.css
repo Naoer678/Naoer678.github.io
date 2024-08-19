@@ -1,0 +1,113 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    padding: 20px;
+    text-align: left; 
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center; 
+    color: aliceblue;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;  
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;  /* 增大表单的圆角 */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);  /* 增大阴影范围和模糊度 */
+    margin: 0 auto;  
+    width: 50%;  
+    transition: box-shadow 0.3s ease;  /* 添加阴影过渡效果 */
+
+    &:hover {  /* 鼠标悬停时的效果 */
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);  /* 更大更明显的阴影 */
+    }
+    @media (max-width: 768px) {  /* 当屏幕宽度小于 768px（常见的移动端宽度）时 */
+        width: 90%;  /* 表单宽度调整为 90% */
+        padding: 15px;  /* 减少内边距 */
+    }
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: normal;  /* 去除"你是哪个年级的"标签的字体加粗 */
+}
+
+#referrer-label {  /* 专门为"你是哪个年级的"这个标签增加样式 */
+    margin-top: 30px;  /* 增加上方间距 */
+    margin-bottom: 30px;  /* 增加下方间距 */
+}
+
+#none-label {  /* 为"没什么感觉，无所谓"这个单选标签添加样式 */
+    margin-bottom: 100px;  /* 增加下方的空间 */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 15px;  /* 增大内边距 */
+    border: 1px solid #ccc;
+    border-radius: 10px;  /* 增大输入框的圆角 */
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);  /* 调整边框颜色为较淡的黑色 */
+    transition: border-color 0.3s ease;  /* 添加边框颜色过渡效果 */
+
+    &:focus {  /* 获得焦点时的效果 */
+        border-color: #007aff;  /* 改变边框颜色 */
+    }
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+    margin: 0 auto;
+}
+
+button {
+    background-color: #007aff;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;  /* 增大按钮的圆角 */
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 auto;
+
+    transition: background-color 0.3s ease;  /* 添加背景颜色过渡效果 */
+
+    &:hover {  /* 鼠标悬停时的效果 */
+        background-color: #0056b3;
+    }
+}
+
+.clue {
+    font-size: 14px;
+    color: #999;
+}
+
+#referrer {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+body {
+    background-image: url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+    background-size: cover;
+}
